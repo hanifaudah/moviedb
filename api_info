@@ -1,2 +1,4 @@
 tmdb poster url : http://image.tmdb.org/t/p/w500/{poster_path}
-tmdb main url : http://api.themoviedb.org/3/search/movie?api_key={api_key}&query=spiderman
+tmdb main url : http://api.themoviedb.org/3/search/movie?api_key=95368f360e3dc457d2f213e11967e205&query=spiderman
+tmdb query by ID: http://api.themoviedb.org/3/movie/{movie_id}?api_key=95368f360e3dc457d2f213e11967e205
+tmdb api_key : 5368f360e3dc457d2f213e11967e205

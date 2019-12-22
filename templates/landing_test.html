@@ -18,35 +18,15 @@
     </div>
     <div class="panels">
         {% for i in movie %}
-        <div class="line"></div>
-        <div class="content d-flex">
-            <div class="poster d-flex justify-content-center">
-                <img class="img-fluid" src="http://image.tmdb.org/t/p/w200/rZd0y1X1Gw4t5B3f01Qzj8DYY66.jpg" alt="">
+        <div class="card d-flex flex-column align-items-center">
+            <div class="content d-flex">
+                <div class="poster d-flex justify-content-center">
+                    <img class="img-fluid" src="http://image.tmdb.org/t/p/w200/rZd0y1X1Gw4t5B3f01Qzj8DYY66.jpg" alt="">
+                </div>
             </div>
+            <h4>{{i.title}}</h4>
+            <p>{{i.date}}</p>
         </div>
-        <table>
-            <tr>
-                <td>Title</td>
-                <td>:</td>
-                <td>{{i.title}}</td>
-            </tr>
-            <tr>
-                <td>Score</td>
-                <td>:</td>
-                <td>{{i.score}}</td>
-            </tr>
-            <tr>
-                <td>Date</td>
-                <td>:</td>
-                <td>{{i.date}}</td>
-            </tr>
-            <tr>
-                <td>Overview</td>
-                <td>:</td>
-                <td>{{i.overview}}</td>
-            </tr>
-        </table>
-        <div class="line"></div>
         {% endfor %}
     </div>
   </body>
@@ -54,3 +34,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
+<!-- <div class="line"></div>
+    <div class="poster d-flex justify-content-center">
+        <img class="img-fluid" src="{{i.poster}}" alt="">
+    </div>
+<table>
+    <tr>
+        <td>Title</td>
+        <td>:</td>
+        <td>{{i.title}}</td>
+    </tr>
+    <tr>
+        <td>Score</td>
+        <td>:</td>
+        <td>{{i.score}}</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>:</td>
+        <td>{{i.date}}</td>
+    </tr>
+    <tr>
+        <td>Overview</td>
+        <td>:</td>
+        <td>{{i.overview}}</td>
+    </tr>
+</table> -->

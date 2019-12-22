@@ -7,34 +7,18 @@
         <button type="submit">Search</button>
     </form>
 </div>
-<div class="panels">
+<div class="panels d-flex flex-wrap justify-content-center">
     {% for i in movie %}
-    <div class="line"></div>
-        <div class="poster d-flex justify-content-center">
-            <img class="img-fluid" src="{{i.poster}}" alt="">
+        <div class="card d-flex flex-column align-items-center">
+            <div class="content d-flex">
+                <div class="poster d-flex justify-content-center">
+                    <img class="img-fluid" src="{{i.poster}}" alt="">
+                </div>
+            </div>
+            <h4>{{i.title}}</h4>
+            <p>{{i.date}}</p>
+            <button id="detailBtn"><a href="/details/{{i.id}}">Details</a></button>
         </div>
-    <table>
-        <tr>
-            <td>Title</td>
-            <td>:</td>
-            <td>{{i.title}}</td>
-        </tr>
-        <tr>
-            <td>Score</td>
-            <td>:</td>
-            <td>{{i.score}}</td>
-        </tr>
-        <tr>
-            <td>Date</td>
-            <td>:</td>
-            <td>{{i.date}}</td>
-        </tr>
-        <tr>
-            <td>Overview</td>
-            <td>:</td>
-            <td>{{i.overview}}</td>
-        </tr>
-    </table>
     {% endfor %}
 </div>
 {% endblock %}

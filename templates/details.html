@@ -1,0 +1,29 @@
+{% extends "layout.html" %} 
+{% block body %}
+{% include 'nav.html' %}
+    <div class="poster d-flex justify-content-center">
+        <img class="img-fluid" src="{{movie.poster}}" alt="">
+    </div>
+<table>
+    <tr>
+        <td>Title</td>
+        <td>:</td>
+        <td>{{movie.title}}</td>
+    </tr>
+    <tr>
+        <td>Score</td>
+        <td>:</td>
+        <td>{{movie.score}}</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>:</td>
+        <td>{{movie.date}}</td>
+    </tr>
+    <tr>
+        <td>Overview</td>
+        <td>:</td>
+        <td>{{movie.overview}}</td>
+    </tr>
+</table>
+{% endblock %}
