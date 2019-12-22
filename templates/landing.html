@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+{% block body %}
+{% include 'nav.html' %}
+<div class="searchBar d-flex justify-content-center">
+    <form method="POST">
+        <input id="search" type="text" name="query" placeholder="Enter movie name">
+        <button type="submit">Search</button>
+    </form>
+</div>
+<div class="panels">
+    {% for i in movie %}
+    <div class="line"></div>
+        <div class="poster d-flex justify-content-center">
+            <img class="img-fluid" src="{{i.poster}}" alt="">
+        </div>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>:</td>
+            <td>{{i.title}}</td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td>:</td>
+            <td>{{i.score}}</td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>:</td>
+            <td>{{i.date}}</td>
+        </tr>
+        <tr>
+            <td>Overview</td>
+            <td>:</td>
+            <td>{{i.overview}}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>
+{% endblock %}

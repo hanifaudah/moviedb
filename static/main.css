@@ -1,0 +1,55 @@
+body {
+    font-family: "Montserrat";
+}
+
+button {
+    border-radius:15px;
+    outline:none;
+    border:none;
+    padding: .25em 1em;
+    transition:all .3s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(100,100,100,.5);
+    transition:all .3s;
+}
+
+table {
+    margin:2em;
+}
+
+td {
+    padding:0 .5em;
+}
+
+.searchBar {
+    margin:2em;
+}
+
+.line {
+    width:90%;
+    margin:1em 2em;
+    border:.9px solid rgba(100,100,100,.5);
+    box-shadow: 0 0 10px rgba(100,100,100,.5);
+}
+
+.panels {
+    margin:1em 3em;
+}
+
+
+#search {
+    border-radius: 15px;
+    height:2em;
+    margin-right:1.2em;
+    padding-left:1em;
+    outline:none;
+    border:none;
+    box-shadow: 0 0 10px rgba(100,100,100,.5);
+}
+
+#search::placeholder {
+    font-size: 1em;
+    color: rgba(0,0,0,.4)
+}
