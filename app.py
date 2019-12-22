@@ -22,8 +22,3 @@ def details(id):
     data = json.loads(requests.get(url).text)
     data = movie(data["id"],data["title"],data["poster_path"],data["vote_average"],data["release_date"],data["overview"])
     return render_template("details.html",movie=data)
-
-# if __name__=="__main__":
-#     url = "http://api.themoviedb.org/3/movie/557?api_key=95368f360e3dc457d2f213e11967e205"
-#     data = json.loads(requests.get(url).text)
-#     print(data["id"])
