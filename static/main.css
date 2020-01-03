@@ -1,5 +1,6 @@
 body {
     font-family: "Montserrat";
+    background:rgb(29, 29, 29)
 }
 
 button {
@@ -7,11 +8,6 @@ button {
     outline:none;
     border:none;
     padding: .25em 1em;
-    transition:all .3s;
-}
-
-button:hover {
-    box-shadow: 0 0 10px rgba(100,100,100,.5);
     transition:all .3s;
 }
 
@@ -24,50 +20,46 @@ td {
     vertical-align: top;
 }
 
-.searchBar {
-    margin:2em;
+.home {
+    margin-top:2em;
 }
 
-.line {
-    width:90%;
-    margin:1em 2em;
-    border:.9px solid rgba(100,100,100,.5);
-    box-shadow: 0 0 10px rgba(100,100,100,.5);
+.heading {
+    color:white;
+    font-size:1em;
+    text-align: left;
+    margin:none;
 }
 
-/* .panels {
-    margin:1em 3em;
-} */
-
-.card {
-    border: 2px solid rgba(100,100,100,.5);
-    border-radius:20px;
-    width:17em;
-    padding:1em;
-    margin:1em;
+.category {
+    padding:0 5em;
+    margin-top:-1.5em;
 }
 
-.card h4 {
-    text-align: center;
-    margin-top:1em;
+.panels {
+    padding: 0 3em;
 }
 
-#detailBtn {
-    border-radius: 20px;
-    outline:none;
+.navbar {
+    background:none;
+}
+
+#logo {
+    height:4em;
 }
 
 #search {
-    border-radius: 15px;
+    background:none;
     height:2em;
     margin-right:1.2em;
     padding-left:1em;
     outline:none;
     border:none;
-    box-shadow: 0 0 10px rgba(100,100,100,.5);
+    border-bottom:2px solid rgba(200,200,200);
+    color: rgba(200,200,200);
 }
 
 #search::placeholder {
     font-size: 1em;
-    color: rgba(0,0,0,.4)
+    color: rgba(200,200,200);
 }

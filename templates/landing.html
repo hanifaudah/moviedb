@@ -1,24 +1,30 @@
 {% extends "layout.html" %} 
 {% block body %}
 {% include 'nav.html' %}
-<div class="searchBar d-flex justify-content-center">
-    <form method="POST">
-        <input id="search" type="text" name="query" placeholder="Enter movie name">
-        <button type="submit">Search</button>
-    </form>
-</div>
-<div class="panels d-flex flex-wrap justify-content-center">
-    {% for i in movie %}
-        <div class="card d-flex flex-column align-items-center">
-            <div class="content d-flex">
-                <div class="poster d-flex justify-content-center">
-                    <img class="img-fluid" src="{{i.poster}}" alt="">
-                </div>
+  <div class="container-fluid">
+    <h1 class="heading">{{movie|length}} Results for {{key_word}}</h1>
+    <div class="slider">
+      <div class="contain">
+      
+        <div class="row">
+          <div class="row__inner">
+            
+            {% for i in movie %}
+            <div class="tile">
+              <a href="/details/{{i.id}}">
+                  <img class="img-fluid" src="{{i.poster}}" alt="">
+                  <div class="tile__details">
+                    <div class="tile__title">
+                      {{i.title}}
+                    </div>
+                  </div>
+              </a>
             </div>
-            <h4>{{i.title}}</h4>
-            <p>{{i.date}}</p>
-            <button id="detailBtn"><a href="/details/{{i.id}}">Details</a></button>
+            {% endfor %}
+
+          </div>
         </div>
-    {% endfor %}
-</div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
